@@ -17,7 +17,7 @@ WITNESS_PATH=$TARGET_DIR/witness.wtns
 echo "Generating the proof for $EXAMPLE_NAME..."
 
 # Generate the witness
-node utils/generate_witness.js $WASM_PATH $INPUT_JSON_PATH $WITNESS_PATH
+node utils/generate_witness.cjs $WASM_PATH $INPUT_JSON_PATH $WITNESS_PATH
 
 # Generate the proof
 snarkjs groth16 prove $ZKEY_PATH $WITNESS_PATH $TARGET_DIR/proof.json $TARGET_DIR/public.json
